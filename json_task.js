@@ -64,11 +64,11 @@ let res = [];
 let transform = (obj) => {
     let temp = {};
     temp["id"] = obj["id"];
-   temp["title"] = obj["title"];
-   temp["childrens"] = [];
-   res.push(temp);
+    temp["title"] = obj["title"];
+    temp["childrens"] = [];
+    res.push(temp);
 
-   if(obj.childrens.length!=0){
+    if(obj.childrens.length!=0){
        obj.childrens.forEach((val)=> {
            transform(val);
        })
@@ -79,4 +79,4 @@ input.forEach((val) => {
     transform(val)
 });
 
-console.log(res)
+console.log(res);
